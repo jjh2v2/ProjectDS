@@ -14,4 +14,10 @@ class PROJECTDS_API UDSAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
 	
+public:
+	UPROPERTY(Transient, BlueprintReadOnly, Category = DSAnimInstance)
+	float Speed = 0.f;
+
+public:
+	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 };
